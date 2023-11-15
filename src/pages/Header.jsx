@@ -18,10 +18,10 @@ const Header = () => {
 
                 </nav>
                 <div className='iconSearch'>
-                    <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href=""><i className="fa fa-search" aria-hidden="true"></i></a>
                 </div>
                 <div className='iconUser'>
-                    <a href=""><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <a href=""><i className="fa fa-user" aria-hidden="true"></i></a>
                 </div>
             </header>
         </div>
