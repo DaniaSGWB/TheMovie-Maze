@@ -135,13 +135,14 @@ a:hover {
 }
 .imagesCarousel{
  display: flex;
- overflow: hidden;
- flex-wrap: wrap;
 }
-.imagesCarousel > div {
-  flex: 0 0 25%;
-  box-sizing: border-box;
-}
+.imagesCarousel h2{
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Anderson grotesk;
+ }
+
 
 .card {
   padding: 2em;
@@ -155,57 +156,50 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1280px; /* Personnalisez la largeur du carrousel selon vos besoins */
+  max-width: 1920px; /* Personnalisez la largeur du carrousel selon vos besoins */
   margin: 0 auto;
   padding: 20px;
 }
 
-.carousel-p {
+.carousel-button {
   font-size: 25px;
+  margin: 20px;
   padding: 10px 15px;
   background-color: transparent;
-  text-decoration: underline;
   color: rgb(255, 255, 255);
-  border-color: black;
+  border-color: rgb(255, 255, 255);
   cursor: pointer;
 }
-.carousel-p:hover {
+.carousel-button:hover {
   padding: 10px 15px;
   background-color: transparent;
   color: #f7b538;
-  border: none;
+  border-color: #f7b538;
   cursor: pointer;
 }
 
 
-.carousel-p.prev {
+.carousel-button.prev {
   order: -1; /* Changez l'ordre pour mettre le bouton "Précédent" à gauche */
 }
 
-.carousel-p.next {
+.carousel-button.next {
   order: 3; /* Changez l'ordre pour mettre le bouton "Suivant" à droite */
 }
 
 
 .carousel {
   display: flex;
-  overflow: hidden;
   align-items: center;
-  justify-content: space-between;
   position:absolute;
   text-align: center;
-}
-.carousel > div {
-  flex: 0 0 25%;
-  box-sizing: border-box;
 }
 
 
 .carousel img {
   max-width: 100%;
   height: 550px;
- 
-  margin: 0 20px;
+  margin: 0 42px;
 }
 
 .footer {

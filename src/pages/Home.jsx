@@ -1,6 +1,5 @@
 import React from 'react';
-import MovieList from '../components/MovieList';
-import Carousel from '../components/Carousel';
+import Carousel from '../components/Carouseldemo';
 
 
 
@@ -23,7 +22,7 @@ function Home() {
                         <img src="images/background.png" alt="" />
                         <div className="carousel">
                             <Carousel>
-                                <MovieList />
+                                <useMovieList />
                             </Carousel>
                         </div>
                     </div>
