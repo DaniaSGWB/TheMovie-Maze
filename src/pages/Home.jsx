@@ -1,6 +1,13 @@
 import React from 'react';
+import MovieList from '../components/MovieList';
+import Carousel from '../components/Carousel';
+
+
+
 
 function Home() {
+
+
     return (
         <div className='container'>
             <div className='content'>
@@ -11,8 +18,19 @@ function Home() {
                         <p>OPPENHEIMER</p>
                     </div>
                 </div>
+                <div className='movieSuggestion'>
+                    <div>
+                        <img src="images/background.png" alt="" />
+                        <div className="carousel">
+                            <Carousel>
+                                <MovieList />
+                            </Carousel>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
     )
 }
 
