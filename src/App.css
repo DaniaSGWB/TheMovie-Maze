@@ -193,7 +193,6 @@ a:hover {
   align-items: center;
   position:absolute;
   text-align: center;
- 
 }
 
 
@@ -206,9 +205,12 @@ a:hover {
 .carouselMovie {
 padding: 120px 0 350px 0;
 }
+.carouselMovie h1{
+  color:#ffffff;
+  }
 
-.carouselTvseries {
-
+.carouselTvseries h1{
+  color:#ffffff;
 }
 .footer {
   display: flex;
