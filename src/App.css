@@ -193,6 +193,7 @@ a:hover {
   align-items: center;
   position:absolute;
   text-align: center;
+ 
 }
 
 
@@ -202,6 +203,13 @@ a:hover {
   margin: 0 42px;
 }
 
+.carouselMovie {
+padding: 120px 0 350px 0;
+}
+
+.carouselTvseries {
+
+}
 .footer {
   display: flex;
   justify-content: center;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from '../components/Carouseldemo';
+import TvseriesList from '../components/TvseriesList';
 
 
 
@@ -23,6 +24,7 @@ function Home() {
                         <div className="carousel">
                             <Carousel>
                                 <useMovieList />
+                                <TvseriesList />
                             </Carousel>
                         </div>
                     </div>

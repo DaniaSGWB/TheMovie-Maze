@@ -3,11 +3,14 @@ import React, { useState } from 'react';
 import '../App.css';
 // Importez le hook personnalisé useMovieList
 import useMovieList from '../hooks/useMovieList';
+import useTvSeriesList from '../hooks/useTvSeriesList';
 
 // Ont définis le composant Carousel
 const Carousel = () => {
   // État pour gérer l'index courant du carousel
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentTvSerieIndex, setCurrentTvSeriesIndex] = useState(0);
+
   // Nombre d'images à afficher par page dans le carousel
   const imagesPerPage = 4;
   // Clé API
@@ -15,6 +18,7 @@ const Carousel = () => {
 
   // hook useMovieList pour récupérer la liste de films
   const movies = useMovieList(apiKey);
+  const tvseries = useTvSeriesList(apiKey);
 
   // Fonction pour passer à la diapositive précédente
   const goToPreviousSlide = () => {
@@ -27,13 +31,26 @@ const Carousel = () => {
       Math.min(movies.length - imagesPerPage, prevIndex + imagesPerPage)
     );
   };
+  const goToPreviousTvSeriesSlide = () => {
+    setCurrentTvSeriesIndex((prevIndex) => Math.max(0, prevIndex - imagesPerPage));
+  };
+
+  const goToNextTvSeriesSlide = () => {
+    setCurrentTvSeriesIndex((prevIndex) =>
+      Math.min(tvseries.length - imagesPerPage, prevIndex + imagesPerPage)
+    );
+  };
+
 
   // Sélectionnez les films à afficher en fonction de l'image actuelle
   const showMovies = movies.slice(currentIndex, currentIndex + imagesPerPage);
+  const showtvSeries = tvseries.slice(currentTvSerieIndex, currentTvSerieIndex + imagesPerPage);
 
   // Affichage du composant Carousel
   return (
     <div>
+      <div className='carouselMovie'>
+      <h1>Movies Suggestion</h1>
       <div className='buttonCarousel'>
         {/* Bouton pour passer à la diapositive précédente */}
         <button className='carousel-button prev' onClick={goToPreviousSlide}>
@@ -58,6 +75,36 @@ const Carousel = () => {
           </div>
         ))}
       </div>
+      </div>
+      <div className='carouselTvseries'>
+      <h1>TV series Suggestion</h1>
+      <div className='buttonCarousel'>
+        {/* Bouton pour passer à la diapositive précédente */}
+        <button className='carousel-button prev' onClick={goToPreviousTvSeriesSlide}>
+          Back
+        </button>
+        {/* Bouton pour passer à la diapositive suivante */}
+        <button className='carousel-button next' onClick={goToNextTvSeriesSlide}>
+          Suivant
+        </button>
+      </div>
+      <div className='imagesCarousel'>
+        {/* Affichage des films */}
+        {showtvSeries.map((tvSeries) => (
+          <div key={tvSeries.id}>
+            {/* Image du film */}
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${tvSeries.poster_path}`}
+              alt={tvSeries.name}
+            />
+            {/* Titre du film */}
+            <h2>{tvSeries.name}</h2>
+          </div>
+        ))}
+      </div>
+      </div>
+      
+      
     </div>
   );
 };
