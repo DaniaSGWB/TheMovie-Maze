@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -115,10 +115,12 @@ a:hover {
 .imageText p {
   font-size: 80px;
 }
-.movieSuggestion{
+
+.movieSuggestion {
 
   margin-bottom: -5px;
 }
+
 .movieSuggestion .carousel {
   display: flex;
   align-items: center;
@@ -126,22 +128,41 @@ a:hover {
   max-width: 1920px;
   margin: -2750px auto;
   padding: 20px;
-  position: absolute; /* Changez de absolute à relative */
 }
-.buttonCarousel{
+
+.items {
+  margin: 10px;
+}
+
+.buttonCarousel {
   display: flex;
   justify-content: flex-start;
   margin: 20px;
 }
-.imagesCarousel{
- display: flex;
+
+.imagesCarousel {
+  display: flex;
+
 }
-.imagesCarousel h2{
+
+.imagesCarouselTV {
+  display: flex;
+
+}
+
+.imagesCarouselTV h2 {
+  display: flex;
+
+}
+
+
+
+.imagesCarousel h2 {
   padding: 15px;
   color: #ffffff;
   font-size: 14px;
   font-family: Anderson grotesk;
- }
+}
 
 
 .card {
@@ -155,10 +176,9 @@ a:hover {
 .carousel-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1920px; /* Personnalisez la largeur du carrousel selon vos besoins */
+  justify-content: center;
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 20px;
 }
 
 .carousel-button {
@@ -170,6 +190,7 @@ a:hover {
   border-color: rgb(255, 255, 255);
   cursor: pointer;
 }
+
 .carousel-button:hover {
   padding: 10px 15px;
   background-color: transparent;
@@ -180,38 +201,50 @@ a:hover {
 
 
 .carousel-button.prev {
-  order: -1; /* Changez l'ordre pour mettre le bouton "Précédent" à gauche */
+  order: -1;
+  /* Changez l'ordre pour mettre le bouton "Précédent" à gauche */
 }
 
 .carousel-button.next {
-  order: 3; /* Changez l'ordre pour mettre le bouton "Suivant" à droite */
+  order: 3;
+  /* Changez l'ordre pour mettre le bouton "Suivant" à droite */
 }
 
 
 .carousel {
   display: flex;
   align-items: center;
-  position:absolute;
+  flex-direction: column;
+  position: absolute;
   text-align: center;
+
 }
 
 
 .carousel img {
-  max-width: 100%;
+
   height: 550px;
   margin: 0 42px;
 }
 
 .carouselMovie {
-padding: 120px 0 350px 0;
+  padding: 120px 0 350px 0;
 }
-.carouselMovie h1{
-  color:#ffffff;
-  }
 
-.carouselTvseries h1{
-  color:#ffffff;
+.carouselMovie h1 {
+  color: #ffffff;
 }
+
+.carouselTvseries h1 {
+  color: #ffffff;
+}
+
+
+.category-container {
+  width: 1920px;
+  height: 100vh;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -222,6 +255,6 @@ padding: 120px 0 350px 0;
   text-align: center;
   align-items: center;
   width: 1920px;
-  margin:0;
+  margin: 0;
   padding: 0;
 }

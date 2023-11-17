@@ -1,12 +1,11 @@
 import React from 'react';
-import Carousel from '../components/Carouseldemo';
+import Carousel from '../components/CarouselMovie';
+import CarouselTV from '../components/CarouselTv';
 import TvseriesList from '../components/TvseriesList';
 
 
 
-
 function Home() {
-
 
     return (
         <div className='container'>
@@ -24,8 +23,10 @@ function Home() {
                         <div className="carousel">
                             <Carousel>
                                 <useMovieList />
-                                <TvseriesList />
                             </Carousel>
+                            <CarouselTV>
+                                <TvseriesList />
+                            </CarouselTV>
                         </div>
                     </div>
                 </div>

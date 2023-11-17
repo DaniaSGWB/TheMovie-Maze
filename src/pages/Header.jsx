@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -10,18 +11,18 @@ const Header = () => {
                 </div>
                 <nav className='nav-container'>
                     <ul>
-                        <li><a href="Home">Home</a></li>
-                        <li><a href="Category">Category</a></li>
-                        <li><a href="Search">Search</a></li>
-                        <li><a href="About">About</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/category">Category</Link></li>
+                        <li><Link to="/search">Search</Link></li>
+                        <li><Link to="/about">About</Link></li>
                     </ul>
 
                 </nav>
                 <div className='iconSearch'>
-                    <a href=""><i className="fa fa-search" aria-hidden="true"></i></a>
+                    <Link to="/search"><i className="fa fa-search" aria-hidden="true"></i></Link>
                 </div>
                 <div className='iconUser'>
-                    <a href=""><i className="fa fa-user" aria-hidden="true"></i></a>
+                    <Link to="/about"><i className="fa fa-user" aria-hidden="true"></i></Link>
                 </div>
             </header>
         </div>
