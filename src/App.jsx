@@ -2,6 +2,8 @@ import { useState } from 'react'
 import '@fortawesome/fontawesome-free/css/all.css';
 import Header from './pages/Header'
 import Home from './pages/Home'
+import MovieCategory from './components/MovieCategory';
+import TvseriesCategory from './components/TVseriesCategory';
 import Category from './pages/Category';
 import Search from './pages/Search';
 import About from './pages/About';
@@ -21,7 +23,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="category" element={<Category />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/movies" element={<MovieCategory />} />
+          <Route path="/tvseries" element={<TvseriesCategory />} />
           <Route path="/search" element={<Search />} />
           <Route path="/about" element={<About />} />
         </Routes>
