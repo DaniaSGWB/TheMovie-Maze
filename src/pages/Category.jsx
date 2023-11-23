@@ -8,15 +8,26 @@ function Category() {
     const [totalPages, setTotalPages] = useState(1);
     const [visiblePages, setVisiblePages] = useState([]);
     const [genres, setGenres] = useState([]);
+    const [CategoryChoice, setCategoryChoice] = useState(null);
+    const [categoryMovies, setCategoryMovies] = useState([]);
+
+
+
+    const items = 6;
+    const firstIndex = (currentPage - 1) * items;
+    const lastIndex = firstIndex + items;
+
+    const moviesToDisplay = movies.slice(firstIndex, lastIndex);
 
 
     useEffect(() => {
-        const fetchMovies = () => {
+        const fetchMovies = (category) => {
             const apiKey = 'e2531ea78db099a16fc1c0cef503b213';
-            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${currentPage}`)
+            fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${currentPage}&with_genres=${category}`)
                 .then((response) => response.json())
                 .then((data) => {
                     setMovies(data.results);
+                    setCategoryMovies(data.results);
                     setTotalPages(data.total_pages);
                     setGenres(data.genres);
 
@@ -31,9 +42,9 @@ function Category() {
                 });
         };
 
-        fetchMovies();
+        fetchMovies(CategoryChoice);
 
-    }, [currentPage, totalPages]);
+    }, [currentPage, CategoryChoice,totalPages]);
 
     const fetchGenres = () => {
         console.log('resalut');
@@ -41,7 +52,7 @@ function Category() {
         fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`)
             .then((response) => response.json())
             .then((data) => {
-                setGenres(data.genres || []); // Assurez-vous que genres est défini même si l'API ne renvoie pas de données
+                setGenres(data.genres || []);
             })
             .catch((error) => {
                 console.error('Error fetching genres:', error);
@@ -50,11 +61,15 @@ function Category() {
 
     useEffect(() => {
         fetchGenres();
-    }, []); // Assurez-vous d'appeler fetchGenres une seule fois au montage du composant
+    }, []);
 
     const handlePageChange = (newPage) => {
         setCurrentPage(newPage);
     };
+    const handleCategoryChoice = (category) => {
+        setCategoryChoice(category);
+        setCurrentPage(1);
+    }
 
 
 
@@ -67,17 +82,24 @@ function Category() {
                 <div className='input-movie'>
                     <input type="text" placeholder='Search a movie' />
                 </div>
-                <h1>Select a category</h1>
+                <h1>{CategoryChoice ? `Catégorie : ${CategoryChoice}` : 'Sélectionnez une catégorie'}</h1>
+
+
                 <div className='grid-container'>
-                    <Link className='grid-category' to="/category/1">Action</Link>
-                    <Link className='grid-category' to="/category/1">Horror</Link>
+                    {genres && genres.map((category) => (
+                        <span className='grid-category' key={category.id} onClick={() => handleCategoryChoice(category.id)}>
+                            {category.name}
+                        </span>
+                    ))}
+
+                    {/* <Link className='grid-category' to="/category/1">Horror</Link>
                     <Link className='grid-category' to="/category/1">Romance</Link>
                     <Link className='grid-category' to="/category/1">Drama</Link>
                     <Link className='grid-category' to="/category/1">Animation</Link>
                     <Link className='grid-category' to="/category/1">Fantasy</Link>
                     <Link className='grid-category' to="/category/1">Thriller</Link>
                     <Link className='grid-category' to="/category/1">Documentary</Link>
-                    <Link className='grid-category' to="/category/1">Adventure</Link>
+                    <Link className='grid-category' to="/category/1">Adventure</Link> */}
                 </div>
             </div>
             <div className='movie-poster'>
@@ -86,12 +108,11 @@ function Category() {
                     <h1>Category title</h1>
 
                     <div className='grid-movie-poster'>
-                        {movies.map((movie) => (
+                        {moviesToDisplay.map((movie) => (
                             <div key={movie.id} className='image-poster'>
-                                <img
-                                    src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                                    alt={movie.title}
-                                />
+                                {movie.poster_path && (
+                                    <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
+                                )}
                                 <div className='infos-poster'>
                                     <h2>{movie.title}</h2>
                                     <p>
@@ -100,14 +121,14 @@ function Category() {
 
                                     <p>{movie.release_date}</p>
                                     <div className='button-poster'>
-                                    <Link className='button-poster-infos' to={`/movie-details/${movie.id}`}>
-                                        More informations
-                                    </Link>
-                                    <Link className='button-poster-watch' to={`/watch-movie/${movie.id}`}>
-                                        Watch movie
-                                    </Link>
+                                        <Link className='button-poster-infos' to={`/movie-details/${movie.id}`}>
+                                            More informations
+                                        </Link>
+                                        <Link className='button-poster-watch' to={`/watch-movie/${movie.id}`}>
+                                            Watch movie
+                                        </Link>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         ))}
@@ -118,7 +139,7 @@ function Category() {
                         <div className='pagination'>
                             {currentPage > 1 && (
                                 <span onClick={() => handlePageChange(currentPage - 1)}>
-                                    &laquo; Précédent
+                                    Précédent
                                 </span>
                             )}
                             {visiblePages.map((page) => (
@@ -133,9 +154,10 @@ function Category() {
                             <span onClick={() => handlePageChange(totalPages)}>
                                 {totalPages}
                             </span>
+
                             {currentPage < totalPages && (
                                 <span onClick={() => handlePageChange(currentPage + 1)}>
-                                    Suivant &raquo;
+                                    Suivant ;
                                 </span>
                             )}
                         </div>
