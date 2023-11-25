@@ -1,7 +1,10 @@
 import React from 'react';
 import Carousel from '../components/CarouselMovie';
 import CarouselTV from '../components/CarouselTv';
-import TvseriesList from '../components/TvseriesList';
+import useMovieList from '../hooks/useMovieList';
+import useTvSeriesList from '../hooks/useTvSeriesList';
+import '../css/home.css';
+
 
 
 
@@ -21,11 +24,9 @@ function Home() {
                     <div>
                         <img src="images/background.png" alt="" />
                         <div className="carousel">
-                            <Carousel>
-                                <useMovieList />
+                            <Carousel movieList={useMovieList} >
                             </Carousel>
-                            <CarouselTV>
-                                <TvseriesList />
+                            <CarouselTV tvSeriesList={useTvSeriesList}>
                             </CarouselTV>
                         </div>
                     </div>

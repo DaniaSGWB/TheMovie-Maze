@@ -1,10 +1,13 @@
+import React, { useState } from 'react';
+import '../css/footer.css';
+
 const Footer = () => {
     return (
-        <footer className='footer'>
-            <div>
-                <h1>Créé par ©ALDA</h1>
-            </div>
-        </footer>
+        <div className='footer'>
+
+            <h1>Créé par ©ALDA</h1>
+
+        </div>
     );
 }
 export default Footer;

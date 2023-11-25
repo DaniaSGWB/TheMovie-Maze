@@ -1,0 +1,191 @@
+
+.category-container {
+    width: 1920px;
+    padding-top: 75px;
+  }
+  .category-container h1{
+  color: #343434;
+  }
+  .category-choice{
+   height: 670px;
+   background-color: #120B02;
+   border-bottom: 3px solid #d8572a;
+  }
+  .category-choice input{
+    float: right;
+    height: 30px;
+    margin: 40px 0 0 0;
+   }
+  .category-choice h1{
+    font-family: Anderson grotesk;
+    font-size: 80px;
+    color: #d8572a;
+    text-align: center;
+    margin-bottom: 20px;
+   }
+   .input-movie {
+    display: flex;
+    justify-content: flex-end;
+   }
+   .input-movie input{
+    width: 336px;
+    margin-right: 60px;
+    padding: 10px;
+    border: 2px solid #d8572a;
+   }
+  
+  .grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0 60px;
+  }
+  .grid-container span {
+    height: 45px;
+  }
+  .grid-category {
+    font-family: barlow condensed;
+    font-weight: bold;
+    background-color: #f7b538;
+    border: 2px solid #120B02; 
+    color: #120B02;
+    margin:8px 80px;
+    font-size: 25px;
+    text-align: center;
+  }
+  .grid-category:hover{
+    font-family: barlow condensed;
+    font-weight: bold;
+    background-color: #d8572a;
+    border: 2px solid #120B02; 
+    color: #120B02;
+    margin:8px 80px;
+    font-size: 25px;
+    text-align: center;
+  }
+  .movie-poster {
+    position: relative;
+    margin-bottom: -5px;
+  }
+  .movie-poster img {
+    height: auto;
+    display: block;
+  }
+  .movie-poster h1 {
+    position: absolute;
+    top: 5%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: #d8572a;
+    text-align: center;
+    z-index: 1; 
+  }
+  .image-poster{
+    background-color: #120B02;
+    border: 3px solid #d8572a;
+    margin: 40px;
+    padding: 30px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .image-poster img{
+    border:3px solid #f7b538;
+    margin: auto;
+    width: 415px;
+    height: auto;
+  }
+  .infos-poster{
+    position: absolute;
+    width: 500px;
+    margin: 90px 0;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+  }
+  .infos-poster h2{
+    text-align: center;
+    margin: 20px 0;
+    color: #ffffff;
+  }
+  
+  .grid-movie-poster{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px,1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 300px 10px 100px 0;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    right: 40px;
+    bottom: 0;
+  }
+  .button-poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .button-poster-infos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    margin-top: 10px;
+    width: 190px;
+    height: 43px;
+    background-color: #343434;
+    color: #f7b538;
+  }
+  .button-poster-watch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    margin-top: 10px;
+    width: 190px;
+    height: 43px;
+    background-color: #f7b538;
+    color: #120B02;
+  }
+  
+  .pagination-container {
+    position: relative;
+  
+  }
+  .pagination {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin: -100px 300px 50px 0;
+  }
+  .pagination span{
+    font-size: 30px;
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .pagination span:hover{
+    font-size: 30px;
+    color: #f7b538;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .pagination button {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 8px 16px;
+    margin: 0 5px;
+  }
+  
+  .pagination button.active {
+    background-color: #f7b538;
+    color: #343434;
+  }
+  

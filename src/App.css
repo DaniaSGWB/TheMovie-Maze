@@ -247,11 +247,13 @@ a:hover {
 color: #343434;
 }
 .category-choice{
- height: 593px;
+
+ height: 670px;
  background-color: #120B02;
  border-bottom: 3px solid #d8572a;
 }
 .category-choice input{
+  margin-bottom: 30px;
   float: right;
   height: 30px;
   margin: 40px 0 0 0;
@@ -261,7 +263,6 @@ color: #343434;
   font-size: 80px;
   color: #d8572a;
   text-align: center;
-  margin-bottom: 20px;
  }
  .input-movie {
   display: flex;
@@ -279,15 +280,17 @@ color: #343434;
   grid-template-columns: auto auto auto;
   padding: 0 60px;
 }
+.grid-container span {
+  height: 45px;
+}
 .grid-category {
   font-family: barlow condensed;
   font-weight: bold;
   background-color: #f7b538;
   border: 2px solid #120B02; 
   color: #120B02;
-  margin:10px 80px;
-  padding: 30px;
-  font-size: 30px;
+  margin:8px 80px;
+  font-size: 25px;
   text-align: center;
 }
 .grid-category:hover{
@@ -296,9 +299,8 @@ color: #343434;
   background-color: #d8572a;
   border: 2px solid #120B02; 
   color: #120B02;
-  margin:10px 80px;
-  padding: 30px;
-  font-size: 30px;
+  margin:8px 80px;
+  font-size: 25px;
   text-align: center;
 }
 .movie-poster {
@@ -390,6 +392,7 @@ color: #343434;
   background-color: #f7b538;
   color: #120B02;
 }
+
 .pagination-container {
   position: relative;
 
@@ -429,16 +432,3 @@ color: #343434;
 
 
 
-.footer {
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  height: 166px;
-  background-color: #343434;
-  color: #d8572a;
-  text-align: center;
-  align-items: center;
-  width: 1920px;
-  margin: 0;
-  padding: 0;
-}

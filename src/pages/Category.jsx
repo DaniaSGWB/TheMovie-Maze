@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import '../css/category.css';
 
 
 function Category() {
@@ -79,10 +80,12 @@ function Category() {
     return (
         <div className='category-container'>
             <div className='category-choice'>
+            <h1>{CategoryChoice ? `Catégorie : ${CategoryChoice}` : 'Sélectionnez une catégorie'}</h1>
                 <div className='input-movie'>
                     <input type="text" placeholder='Search a movie' />
+                    
                 </div>
-                <h1>{CategoryChoice ? `Catégorie : ${CategoryChoice}` : 'Sélectionnez une catégorie'}</h1>
+                
 
 
                 <div className='grid-container'>
@@ -157,7 +160,7 @@ function Category() {
 
                             {currentPage < totalPages && (
                                 <span onClick={() => handlePageChange(currentPage + 1)}>
-                                    Suivant ;
+                                    Suivant 
                                 </span>
                             )}
                         </div>
