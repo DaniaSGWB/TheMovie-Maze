@@ -393,42 +393,6 @@ color: #343434;
   color: #120B02;
 }
 
-.pagination-container {
-  position: relative;
-
-}
-.pagination {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  margin: -200px 300px 0 0;
-}
-.pagination span{
-  font-size: 30px;
-  color: #ffffff;
-  padding: 10px;
-  cursor: pointer;
-}
-.pagination span:hover{
-  font-size: 30px;
-  color: #f7b538;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.pagination button {
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 8px 16px;
-  margin: 0 5px;
-}
-
-.pagination button.active {
-  background-color: #f7b538;
-  color: #343434;
-}
 
 
 

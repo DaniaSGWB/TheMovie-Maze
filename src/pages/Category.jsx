@@ -174,6 +174,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+
+
 import '../css/category.css'
 
 function Category() {
@@ -184,6 +186,7 @@ function Category() {
   const [genres, setGenres] = useState([]);
   const [CategoryChoice, setCategoryChoice] = useState(null);
   const [categoryMovies, setCategoryMovies] = useState([]);
+
 
   const items = 6;
   const firstIndex = (currentPage - 1) * items;
@@ -244,6 +247,8 @@ function Category() {
     setCurrentPage(1);
   };
 
+  
+
   return (
     <div className='category-container'>
       <div className='category-choice'>
@@ -261,9 +266,11 @@ function Category() {
           ))}
         </div>
       </div>
+          
 
+          
       <div className='movie-poster'>
-        <img src="./images/background.png" alt="" />
+        <img className='background-image' src="./images/background.png" alt="" />
         <div>
           <div className='grid-movie-poster'>
             {moviesToDisplay.map((movie) => (
@@ -329,6 +336,7 @@ function Category() {
         </div>
       </div>
     </div>
+    
   );
 }
 

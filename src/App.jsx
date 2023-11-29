@@ -8,6 +8,7 @@ import TvseriesCategory from './components/TVseriesCategory';
 import Category from './pages/Category';
 import Search from './pages/Search';
 import About from './pages/About';
+import MovieProfil from './pages/Movieprofil';
 import Footer from './pages/Footer';
 import { BrowserRouter, NavLink, Routes, Route } from 'react-router-dom';
 
@@ -31,7 +32,11 @@ function App() {
           <Route path="/tvseries" element={<TvseriesCategory />} />
           <Route path="/search" element={<Search />} />
           <Route path="/about" element={<About />} />
-        </Routes>  
+
+
+          <Route path="/movie-details/:id" element={<MovieProfil />} />
+
+        </Routes>
       </BrowserRouter>
     </>
   )

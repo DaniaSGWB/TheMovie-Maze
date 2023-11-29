@@ -1,0 +1,20 @@
+.container-movieprofil{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 1920px;
+    margin-top: 100px;
+}
+
+.images-movieProfil{
+    width: 400px;
+}
+.infos-movieProfil{
+    text-align: center;
+    width: 800px;
+}
+
+.button-movieProfil{
+    display: flex;
+    justify-content: space-between;
+}
