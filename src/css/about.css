@@ -1,0 +1,42 @@
+
+
+.container-about {
+    position: relative;
+}
+.background{
+    width: 100%;
+    height: auto;
+}
+
+.content-about {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.popcorn{
+    width: 769px;
+    height: 1275px;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 739px;
+    padding: 30px;
+    color: #ffffff;
+}
+.about h1 {
+    font-size: 100px;
+    padding:30px;
+
+}
+.about h3{
+    font-size: 40px;
+    padding-left: 30px;
+}
+.about p{
+    padding: 40px;
+    font-size: 30px;
+}

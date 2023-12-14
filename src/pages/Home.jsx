@@ -3,6 +3,7 @@ import Carousel from '../components/CarouselMovie';
 import CarouselTV from '../components/CarouselTv';
 import useMovieList from '../hooks/useMovieList';
 import useTvSeriesList from '../hooks/useTvSeriesList';
+import { Link } from 'react-router-dom';
 import '../css/home.css';
 
 
@@ -24,8 +25,9 @@ function Home() {
                     <div>
                         <img src="images/background.png" alt="" />
                         <div className="carousel">
-                            <Carousel movieList={useMovieList} >
-                            </Carousel>
+                        <Link to="/movie-details/:id">
+                                <Carousel movieList={useMovieList} />
+                            </Link>
                             <CarouselTV tvSeriesList={useTvSeriesList}>
                             </CarouselTV>
                         </div>

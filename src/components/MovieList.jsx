@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import detectLanguage from 'detectlanguage';
 
 
+
 const MovieList = () => {
     const [movies, setMovies] = useState([]);
     const apiKey = 'e2531ea78db099a16fc1c0cef503b213';
@@ -39,6 +40,7 @@ const MovieList = () => {
                             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                             alt={movie.title}
                         />
+                        
                         <h2>{movie.title}</h2>
                     </li>
                 ))}

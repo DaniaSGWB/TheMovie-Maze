@@ -28,13 +28,13 @@ function Search() {
         const apiKey = 'e2531ea78db099a16fc1c0cef503b213';
 
 
-        fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`)
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchInit}`)
             .then(response => response.json())
-            .then(data => setSearchResults(data.Results))
+            .then(data => setSearchResults(data.results))
             .catch(error => console.error('Error fetching:', error))
 
 
-    }, []);
+    }, [searchInit]);
 
     const handleInputChange = (e) => {
         setSearchInit(e.target.value);
@@ -46,14 +46,8 @@ function Search() {
             <div className='container-search'>
                 <img className="background-image" src="images/background.png" alt="" />
                 <div className='movie-poster'>
-                    <div className='grid-movie-poster'>
-
-                    </div>
-        {/* Afficher la liste de films */}
         <MovieList page={moviePage} />
-        {/* Pagination controls pour les films */}
                 </div>
-                 
         <div>
           <button onClick={() => handleMoviePageChange(moviePage - 1)} disabled={moviePage === 1}>
             Previous Page
