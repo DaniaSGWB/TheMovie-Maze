@@ -1,0 +1,39 @@
+.container-connexion{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.content-connexion{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: #707070;
+    height: 458px;
+    width: 867px;
+}
+.inputconnexion {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.inputconnexion input{
+    border: none;
+    color: #f8efef;
+    margin: 100px;
+    width: 500px;
+}
+.inputconnexion hr{
+    background-color: #f8efef;
+    width: 500px;
+}
+
+.create-account{
+    display: flex;
+    justify-content: center;
+}
+
+

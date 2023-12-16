@@ -23,7 +23,7 @@ const Header = () => {
                     <Link to="/search"><i className="fa fa-search" aria-hidden="true"></i></Link>
                 </div>
                 <div className='iconUser'>
-                    <Link to="/about"><i className="fa fa-user" aria-hidden="true"></i></Link>
+                    <Link to="/connexion"><i className="fa fa-user" aria-hidden="true"></i></Link>
                 </div>
             </header>
         </div>

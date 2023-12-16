@@ -1,0 +1,149 @@
+
+.homeImage {
+    height: 1080px;
+    position: relative;
+  }
+  
+  .imageText {
+    position: absolute;
+    font-size: 15px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #f7b538;
+    letter-spacing: 12px;
+    font-family: Anderson grotesk;
+  }
+  
+  .imageText h1 span {
+    font-size: 40px;
+  }
+  
+  .imageText p {
+    font-size: 80px;
+  }
+  
+  .movieSuggestion {
+  
+    margin-bottom: -5px;
+  }
+  
+  .movieSuggestion .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1920px;
+    margin: -2750px auto;
+    padding: 20px;
+  }
+  
+  .items {
+    margin: 10px;
+  }
+  
+  .buttonCarousel {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+  }
+  
+  .imagesCarousel {
+    display: flex;
+  
+  }
+  
+  .imagesCarouselTV {
+    display: flex;
+  
+  }
+  
+  .imagesCarouselTV h2 {
+    display: flex;
+  
+  }
+  
+  
+  
+  .imagesCarousel h2 {
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: Anderson grotesk;
+  }
+  
+  
+  .card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+  
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  
+  .carousel-button {
+    font-size: 25px;
+    margin: 20px;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+  
+  .carousel-button:hover {
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #f7b538;
+    border-color: #f7b538;
+    cursor: pointer;
+  }
+  
+  
+  .carousel-button.prev {
+    order: -1;
+    /* Changez l'ordre pour mettre le bouton "Précédent" à gauche */
+  }
+  
+  .carousel-button.next {
+    order: 3;
+    /* Changez l'ordre pour mettre le bouton "Suivant" à droite */
+  }
+  
+  
+  .carousel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+  
+  }
+  
+  
+  .carousel img {
+  
+    height: 550px;
+    margin: 0 42px;
+  }
+  
+  .carouselMovie {
+    padding: 120px 0 350px 0;
+  }
+  
+  .carouselMovie h1 {
+    color: #ffffff;
+  }
+  
+  .carouselTvseries h1 {
+    color: #ffffff;
+  }
+  
