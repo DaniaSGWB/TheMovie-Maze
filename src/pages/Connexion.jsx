@@ -6,25 +6,32 @@ const Connexion = () => {
 
     return (
         <div className='container-connexion'>
-            <img className="background" src="images/background.png" alt="" />
+            <img className="background-connexion" src="images/background.png" alt="" />
             <div className='content-connexion'>
                 <div className='inputconnexion'>
-                <input type="text" placeholder='Email or Username'/>
-                <hr />
-                    <input type="text" placeholder='Password'/>
+                    <div className='email-input'>
+                    <input type="text" placeholder='Email or Username' />
                     <hr />
+                    </div>
+                    <div>
+                    <input type="text" placeholder='Password' />
+                    <hr />
+                    <Link className="psw-forgot" to="/forgot-password">Forgot Password?</Link>
+                    </div>
                     
                 </div>
-                <Link to="/forgot-password">Forgot Password?</Link>
+                
             </div>
-            <Link to="/connexion">
-        <button>Login</button>
-      </Link>
-        <div className='create-account'>
-        <h3>No account?</h3>
-        <Link to="/registration">Create One</Link>
-        </div>
-      
+           
+            <Link className='button-login' to="/">
+                Login
+            </Link>
+          
+            
+            <div className='create-account'>
+                <h3>No account?</h3>
+                <Link className="account-registration" to="/registration">Create One</Link>
+            </div>
         </div>
     );
 }

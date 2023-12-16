@@ -1,16 +1,16 @@
-.footer h1{
+
+  .footer{
     display: flex;
     justify-content: center;
     box-sizing: border-box;
     height: 166px;
     background-color: #343434;
-    color: #d8572a;
     text-align: center;
     align-items: center;
-    width: 1920px;
+    width: 100%;
     margin: 0;
     padding: 0;
   }
-  .footer{
-    bottom:0;
+  .footer h1{
+    color: #d8572a;
   }

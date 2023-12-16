@@ -65,7 +65,7 @@ color: #343434;
 }
 .movie-poster {
   position: relative;
-height: 100vh;
+height: auto;
 }
 .movie-poster img {
   height: auto;
@@ -112,15 +112,15 @@ height: 100vh;
   color: #ffffff;
 }
 
-.grid-movie-poster{
+.grid-movie-poster-category{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(2,1fr);
   gap: 20px;
   justify-content: center;
-  padding: 300px 10px 100px 0;
+  padding: 200px 10px 100px 0;
   position: absolute;
-  top: 0;
+ top: 0;
   left: 40px;
   right: 40px;
   bottom: 0;
@@ -156,31 +156,27 @@ height: 100vh;
 }
 
   
-  .pagination-container {
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  .pagination {
-    position: relative;
+  .pagination-container-category {
     display: flex;
     justify-content: flex-end;
-    margin: 20px 0;
   }
-  .pagination span{
+  .pagination-category {
+    margin: -100px 40px;
+  }
+  .pagination-category span{
     font-size: 30px;
     color: #ffffff;
     padding: 10px;
     cursor: pointer;
   }
-  .pagination span:hover{
+  .pagination-category span:hover{
     font-size: 30px;
     color: #f7b538;
     padding: 10px;
     cursor: pointer;
   }
   
-  .pagination button {
+  .pagination-category button {
     background-color: transparent;
     border: 1px solid #ffffff;
     color: #ffffff;
@@ -189,7 +185,7 @@ height: 100vh;
     margin: 0 5px;
   }
   
-  .pagination button.active {
+  .pagination-category button.active {
     background-color: #f7b538;
     color: #343434;
   }

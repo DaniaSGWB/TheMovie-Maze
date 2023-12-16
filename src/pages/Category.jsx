@@ -92,7 +92,7 @@ function Category() {
       <div className='movie-poster'>
         <img className='background-image' src="./images/background.png" alt="" />
         <div>
-          <div className='grid-movie-poster'>
+          <div className='grid-movie-poster-category'>
             {moviesToDisplay.map((movie) => (
               // Affichage des affiches de films avec informations
               <div key={movie.id} className='image-poster'>
@@ -119,8 +119,8 @@ function Category() {
           </div>
 
           {moviesToDisplay.length > 0 ? (
-            <div className="pagination-container">
-              <div className='pagination'>
+            <div className="pagination-container-category">
+              <div className='pagination-category'>
                 {currentPage > 1 && (
                   <span onClick={() => handlePageChange(currentPage - 1)}>
                     Précédent
@@ -152,7 +152,7 @@ function Category() {
           )}
         </div>
       </div>
-    </div>
+      </div>
     
   );
 }
