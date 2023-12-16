@@ -65,7 +65,7 @@ color: #343434;
 }
 .movie-poster {
   position: relative;
-  margin-bottom: -5px;
+height: 100vh;
 }
 .movie-poster img {
   height: auto;
@@ -84,6 +84,8 @@ color: #343434;
 .image-poster{
   background-color: #120B02;
   border: 3px solid #d8572a;
+  height: 1096px;
+  width: 559px;
   margin: 40px;
   padding: 30px;
   position: relative;
@@ -92,14 +94,13 @@ color: #343434;
 .image-poster img{
   border:3px solid #f7b538;
   margin: auto;
-  width: 415px;
-  height: auto;
+  width: 431px;
+  height: 701px;
 }
 .infos-poster{
   position: absolute;
   width: 500px;
-  margin: 90px 0;
-  top: 65%;
+  margin: 150px 0;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -113,7 +114,8 @@ color: #343434;
 
 .grid-movie-poster{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px,1fr));
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
   gap: 20px;
   justify-content: center;
   padding: 300px 10px 100px 0;
@@ -163,7 +165,7 @@ color: #343434;
     position: relative;
     display: flex;
     justify-content: flex-end;
-    margin: -100px 300px 50px 0;
+    margin: 20px 0;
   }
   .pagination span{
     font-size: 30px;

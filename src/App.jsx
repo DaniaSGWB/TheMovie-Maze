@@ -41,6 +41,7 @@ function App() {
           <Route path="/movie-details/:id" element={<MovieProfil />} />
 
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   )
