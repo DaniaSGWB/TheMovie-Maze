@@ -1,9 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-
-
 import '../css/category.css'
 
 function Category() {
@@ -39,7 +36,6 @@ function Category() {
           console.error('Error fetching movies:', error);
         });
     };
-
     fetchMovies(CategoryChoice);
   }, [currentPage, CategoryChoice, totalPages]);
 
@@ -68,8 +64,6 @@ function Category() {
     setCurrentPage(1);
   };
 
-  
-
   return (
     <div className='category-container'>
       <div className='category-choice'>
@@ -77,7 +71,6 @@ function Category() {
           <input type="text" placeholder='Search a movie' />
         </div>
         <h1>{CategoryChoice ? `Catégorie : ${CategoryChoice}` : 'Sélectionnez une catégorie'}</h1>
-
         <div className='grid-container'>
           {genres && genres.map((category) => (
             <span className='grid-category' key={category.id} onClick={() => handleCategoryChoice(category.id)}>
@@ -86,9 +79,6 @@ function Category() {
           ))}
         </div>
       </div>
-          
-
-
       <div className='movie-poster'>
         <img className='background-image' src="./images/background.png" alt="" />
         <div>
@@ -117,7 +107,6 @@ function Category() {
               </div>
             ))}
           </div>
-
           {moviesToDisplay.length > 0 ? (
             <div className="pagination-container-category">
               <div className='pagination-category'>
@@ -140,7 +129,7 @@ function Category() {
                 </span>
                 {currentPage < totalPages && (
                   <span onClick={() => handlePageChange(currentPage + 1)}>
-                    Suivant 
+                    Suivant
                   </span>
                 )}
               </div>
@@ -152,8 +141,8 @@ function Category() {
           )}
         </div>
       </div>
-      </div>
-    
+    </div>
+
   );
 }
 

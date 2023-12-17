@@ -9,17 +9,14 @@ const Trailermovie = ({ videoId }) => {
     const { id } = useParams();
     useEffect(() => {
         const apiKey = 'e2531ea78db099a16fc1c0cef503b213';
-
         const fetchVideo = async () => {
             try {
                 const response = await fetch(
                     `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${apiKey}`
                 );
-
                 if (response.ok) {
                     const data = await response.json();
                     const firstVideo = data.results[0];
-
                     if (firstVideo) {
                         setVideo(firstVideo.key);
                     } else {
@@ -37,7 +34,6 @@ const Trailermovie = ({ videoId }) => {
         <div className='container-trailer'>
             {movieTitle && <h1>{movieTitle}</h1>}
             {video ? (
-
                 <iframe
                     width="960"
                     height="540"

@@ -24,32 +24,31 @@ function MovieProfil() {
 
   return (
     <div className='container-movieprofil'>
-        <img src="images/background.png" alt="" />
-        <img className='images-movieProfil'
+      <img src="images/background.png" alt="" />
+      <img className='images-movieProfil'
         src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`}
         alt={movieDetails.title}
       />
       <div className='infos-movieProfil'>
 
-      
-      <p>Acteurs: {movieDetails.credits?.cast.map(actor => actor.name).join(', ')}</p>
-      <p>Date de sortie: {movieDetails.release_date}</p>
-      <p>Durée: {movieDetails.runtime} minutes</p>
-      <p>Catégorie: {movieDetails.genres.map(genre => genre.name).join(', ')}</p>
-      <p>Synopsis: {movieDetails.overview}</p>
-      <Link to={`/watch-trailer/${id}`}>
-        <button>Watch Trailer</button>
-      </Link>
-      <div className='button-movieProfil'>
-      <Link to="/category">
-        <button>Back to Category</button>
-      </Link>
-      <Link to={`/watch-movie/${id}`}>
-        <button>Watch Movie</button>
-      </Link>
+
+        <p>Acteurs: {movieDetails.credits?.cast.map(actor => actor.name).join(', ')}</p>
+        <p>Date de sortie: {movieDetails.release_date}</p>
+        <p>Durée: {movieDetails.runtime} minutes</p>
+        <p>Catégorie: {movieDetails.genres.map(genre => genre.name).join(', ')}</p>
+        <p>Synopsis: {movieDetails.overview}</p>
+        <Link to={`/watch-trailer/${id}`}>
+          <button>Watch Trailer</button>
+        </Link>
+        <div className='button-movieProfil'>
+          <Link to="/category">
+            <button>Back to Category</button>
+          </Link>
+          <Link to={`/watch-movie/${id}`}>
+            <button>Watch Movie</button>
+          </Link>
+        </div>
       </div>
-     
-    </div>
     </div>
   );
 }

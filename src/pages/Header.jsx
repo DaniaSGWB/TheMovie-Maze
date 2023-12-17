@@ -17,7 +17,6 @@ const Header = () => {
                         <li><Link to="/search">Search</Link></li>
                         <li><Link to="/about">About</Link></li>
                     </ul>
-
                 </nav>
                 <div className='iconSearch'>
                     <Link to="/search"><i className="fa fa-search" aria-hidden="true"></i></Link>

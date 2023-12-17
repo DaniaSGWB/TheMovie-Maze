@@ -9,22 +9,18 @@ import Category from './pages/Category';
 import Search from './pages/Search';
 import About from './pages/About';
 import MovieProfil from './pages/Movieprofil';
+import Actor from './pages/Actor';
 import Connexion from './pages/Connexion';
 import Registration from './pages/Registration';
 import Screenmovie from './pages/Screenmovie';
-import Trailermovie  from './pages/trailermovie';
+import Trailermovie from './pages/trailermovie';
 import Footer from './pages/Footer';
 import { BrowserRouter, NavLink, Routes, Route } from 'react-router-dom';
 
 
-
-/*Api Key : e2531ea78db099a16fc1c0cef503b213*/
-/* Api URL : https://api.themoviedb.org/3/movie/ */
-
-function App() {  
+function App() {
   return (
     <>
-    
       <BrowserRouter>
         <Header />
         <Routes>
@@ -38,10 +34,8 @@ function App() {
           <Route path="/watch-trailer/:id" element={<Trailermovie />} />
           <Route path="/connexion" element={<Connexion />} />
           <Route path="/registration" element={<Registration />} />
-
-
+          <Route path="/actor" element={<Actor />} />
           <Route path="/movie-details/:id" element={<MovieProfil />} />
-
         </Routes>
         <Footer />
       </BrowserRouter>

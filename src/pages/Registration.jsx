@@ -22,16 +22,14 @@ const Registration = () => {
                             <input type="text" placeholder='Password' />
                             <hr />
                         </div>
-
                         <div className='email-input-registration'>
                             <input type="text" placeholder='Confirm Password' />
                             <hr />
                         </div>
                     </div>
                 </div>
-
             </div>
-            <Link className='button-create-account' to="/">
+            <Link className='button-create-account' to="/connexion">
                 Create Account
             </Link>
         </div>
