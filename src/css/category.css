@@ -118,7 +118,7 @@ height: auto;
   grid-template-rows: repeat(2,1fr);
   gap: 20px;
   justify-content: center;
-  padding: 200px 10px 100px 0;
+  margin: 200px 10px 100px 0;
   position: absolute;
  top: 0;
   left: 40px;

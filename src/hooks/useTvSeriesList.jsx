@@ -14,7 +14,7 @@ const useTvSeriesList = (apiKey) => {
           settvseries(data.results);
         }
       } catch (error) {
-        console.error('Erreur dans le fetching de mes données: ', error);
+        console.error('Error fetching my data: ', error);
       }
     };
 

@@ -123,9 +123,7 @@ function Category() {
                     {page}
                   </span>
                 ))}
-                <span onClick={() => handlePageChange(totalPages)}>
-                  {totalPages}
-                </span>
+
                 {currentPage < totalPages && (
                   <span onClick={() => handlePageChange(currentPage + 1)}>
                     Suivant
