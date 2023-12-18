@@ -8,7 +8,9 @@ const Header = () => {
         <div>
             <header className='header'>
                 <div className="logo">
-                    <img src="images/logo.png" alt="" style={{ width: '300px' }} />
+                    <Link to="/">
+                        <img src="images/logo.png" alt="" style={{ width: '300px' }} />
+                    </Link>
                 </div>
                 <nav className='nav-container'>
                     <ul>

@@ -34,7 +34,6 @@ const Screenmovie = ({ videoId }) => {
         <div className='container-watch'>
             {movieTitle && <h1>{movieTitle}</h1>}
             {video ? (
-
                 <iframe
                     width="960"
                     height="540"

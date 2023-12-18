@@ -1,0 +1,73 @@
+.input-actor {}
+
+.container-actor {
+    display: flex;
+    flex-direction: row;
+    margin-left: 300px;
+    align-items: center;
+    margin-top: 300px;
+}
+
+.container-actor img {
+    width: 300px;
+}
+
+.content-actor {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    color: #ffffff;
+    width: 300px;
+}
+
+.content-actor h2 {
+    font-family: Anderson Grotesk;
+    font-size: 60px;
+    color: #D8572A;
+}
+
+.content-actor strong {
+    font-family: Barlow;
+    color: #F7B538;
+}
+
+.content-actor p {
+    font-family: Barlow;
+    font-size: 40px;
+    margin: 25px 0;
+    color: #ffffff;
+}
+
+.biography {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.biography p {
+    margin-top: 30px;
+    width: 1200px;
+    color: #D8572A;
+    line-height: 1.4;
+}
+
+.button-back-movie {
+    background-color: #F7B538;
+    color: #120B02;
+    width: 413px;
+    height: 100px;
+    padding: 10px 50px;
+    font-family: Anderson Grotesk;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    margin: 200px auto 200px auto;
+}
+
+.button-back-movie:hover {
+    background-color: #F7B538;
+    color: #D8572A;
+
+}

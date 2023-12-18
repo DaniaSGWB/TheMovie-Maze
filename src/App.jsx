@@ -34,7 +34,7 @@ function App() {
           <Route path="/watch-trailer/:id" element={<Trailermovie />} />
           <Route path="/connexion" element={<Connexion />} />
           <Route path="/registration" element={<Registration />} />
-          <Route path="/actor" element={<Actor />} />
+          <Route path="/actor-details/:id" element={<Actor />} />
           <Route path="/movie-details/:id" element={<MovieProfil />} />
         </Routes>
         <Footer />

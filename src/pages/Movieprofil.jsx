@@ -5,14 +5,13 @@ import { Link } from 'react-router-dom';
 import '../css/movieProfil.css';
 
 function MovieProfil() {
-  const { id } = useParams(); // Récupère l'ID du film depuis l'URL
+  const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
 
   useEffect(() => {
     const apiKey = 'e2531ea78db099a16fc1c0cef503b213';
 
-    // Faites une requête pour obtenir les détails du film en utilisant l'ID
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`)
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&append_to_response=credits`)
       .then(response => response.json())
       .then(data => setMovieDetails(data))
       .catch(error => console.error('Error fetching movie details:', error));
@@ -30,14 +29,19 @@ function MovieProfil() {
         alt={movieDetails.title}
       />
       <div className='infos-movieProfil'>
+        <p>Acteurs: {' '}
+          {movieDetails.credits?.cast.map((actor, index) => (
+            <span key={actor.id}>
+              {index > 0 && ', '}
+              <Link to={`/actor-details/${actor.id}`}>{actor.name}</Link>
+            </span>
+          ))}</p>
 
-
-        <p>Acteurs: {movieDetails.credits?.cast.map(actor => actor.name).join(', ')}</p>
         <p>Date de sortie: {movieDetails.release_date}</p>
         <p>Durée: {movieDetails.runtime} minutes</p>
         <p>Catégorie: {movieDetails.genres.map(genre => genre.name).join(', ')}</p>
         <p>Synopsis: {movieDetails.overview}</p>
-        <Link to={`/watch-trailer/${id}`}>
+        <Link className="button-trailer" to={`/watch-trailer/${id}`}>
           <button>Watch Trailer</button>
         </Link>
         <div className='button-movieProfil'>

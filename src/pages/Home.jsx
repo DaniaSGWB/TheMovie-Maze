@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 import '../css/home.css';
 
 
-
-
 function Home() {
 
     return (
@@ -17,7 +15,7 @@ function Home() {
                 <div className='homeImage'>
                     <img src="images/imageHome.jpg" alt="" style={{ width: '1920px' }} />
                     <div className="imageText">
-                        <h1>UN FILM DE <span>CHRISTOPHER NOLAN</span></h1>
+                        <h1>A movie of <span>CHRISTOPHER NOLAN</span></h1>
                         <p>OPPENHEIMER</p>
                     </div>
                 </div>
@@ -28,8 +26,10 @@ function Home() {
                         <Link to="/movie-details/:id">
                                 <Carousel movieList={useMovieList} />
                             </Link>
+                            <Link to="/movie-details/:id">
                             <CarouselTV tvSeriesList={useTvSeriesList}>
                             </CarouselTV>
+                            </Link>
                         </div>
                     </div>
                 </div>

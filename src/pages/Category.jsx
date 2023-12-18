@@ -70,7 +70,7 @@ function Category() {
         <div className='input-movie'>
           <input type="text" placeholder='Search a movie' />
         </div>
-        <h1>{CategoryChoice ? `Catégorie : ${CategoryChoice}` : 'Sélectionnez une catégorie'}</h1>
+        <h1>{CategoryChoice ? `Catégory : ${CategoryChoice}` : 'Select a category'}</h1>
         <div className='grid-container'>
           {genres && genres.map((category) => (
             <span className='grid-category' key={category.id} onClick={() => handleCategoryChoice(category.id)}>
@@ -84,7 +84,6 @@ function Category() {
         <div>
           <div className='grid-movie-poster-category'>
             {moviesToDisplay.map((movie) => (
-              // Affichage des affiches de films avec informations
               <div key={movie.id} className='image-poster'>
                 {movie.poster_path && (
                   <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
@@ -142,7 +141,6 @@ function Category() {
         </div>
       </div>
     </div>
-
   );
 }
 

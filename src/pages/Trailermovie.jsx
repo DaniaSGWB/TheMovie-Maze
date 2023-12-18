@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import '../css/trailermovie.css';
 
-const Trailermovie = ({ videoId }) => {
+const Trailermovie = () => {
     const [video, setVideo] = useState('');
     const [movieTitle, setMovieTitle] = useState('');
     const { id } = useParams();
@@ -20,11 +20,11 @@ const Trailermovie = ({ videoId }) => {
                     if (firstVideo) {
                         setVideo(firstVideo.key);
                     } else {
-                        console.error('Vidéo non disponible.');
+                        console.error('videos not available.');
                     }
                 }
             } catch (err) {
-                console.error('Erreur lors de la récupération de la vidéo :', err.message);
+                console.error('Error retrieving video :', err.message);
             }
         };
         fetchVideo()
@@ -38,12 +38,12 @@ const Trailermovie = ({ videoId }) => {
                     width="960"
                     height="540"
                     src={`https://www.youtube.com/embed/${video}`}
-                    title="Lecteur vidéo YouTube"
+                    title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                 ></iframe>
             ) : (
-                <p>Aucune vidéo disponible pour le moment.</p>
+                <p>no videos available at the moment.</p>
             )}
         </div>
     );
