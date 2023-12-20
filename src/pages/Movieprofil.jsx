@@ -46,10 +46,10 @@ function MovieProfil() {
         </Link>
         <div className='button-movieProfil'>
           <Link to="/category">
-            <button>Back to Category</button>
+            <button id='gris'>Back to Category</button>
           </Link>
           <Link to={`/watch-movie/${id}`}>
-            <button>Watch Movie</button>
+            <button id='jaune'>Watch Movie</button>
           </Link>
         </div>
       </div>

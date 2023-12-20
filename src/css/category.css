@@ -1,87 +1,99 @@
-
 .category-container {
   width: 1920px;
   padding-top: 75px;
 }
-.category-container h1{
-color: #343434;
-}
-.category-choice{
 
- height: 670px;
- background-color: #120B02;
- border-bottom: 3px solid #d8572a;
+.category-container h1 {
+  color: #343434;
 }
-.category-choice input{
+
+.category-choice {
+
+  height: 670px;
+  background-color: #120B02;
+  border-bottom: 3px solid #d8572a;
+}
+
+.category-choice input {
   margin-bottom: 30px;
   float: right;
   height: 30px;
   margin: 40px 0 0 0;
- }
-.category-choice h1{
+}
+
+.category-choice h1 {
   font-family: Anderson grotesk;
   font-size: 80px;
   color: #d8572a;
   text-align: center;
- }
- .input-movie {
+}
+
+.input-movie {
   display: flex;
   justify-content: flex-end;
- }
- .input-movie input{
+}
+
+.input-movie input {
   width: 336px;
   margin-right: 60px;
   padding: 10px;
   border: 2px solid #d8572a;
- }
+}
 
-.grid-container{
+.grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 0 60px;
 }
+
 .grid-container span {
   height: 45px;
 }
+
 .grid-category {
   font-family: barlow condensed;
   font-weight: bold;
   background-color: #f7b538;
-  border: 2px solid #120B02; 
+  border: 2px solid #120B02;
   color: #120B02;
-  margin:8px 80px;
+  margin: 8px 80px;
   font-size: 25px;
   text-align: center;
 }
-.grid-category:hover{
+
+.grid-category:hover {
   font-family: barlow condensed;
   font-weight: bold;
   background-color: #d8572a;
-  border: 2px solid #120B02; 
+  border: 2px solid #120B02;
   color: #120B02;
-  margin:8px 80px;
+  margin: 8px 80px;
   font-size: 25px;
   text-align: center;
 }
+
 .movie-poster {
   position: relative;
-height: auto;
+  height: auto;
 }
+
 .movie-poster img {
   height: auto;
   display: block;
 }
+
 .movie-poster h1 {
   position: absolute;
-  top: 5%; 
-  left: 50%; 
+  top: 5%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 60px;
   color: #d8572a;
   text-align: center;
-  z-index: 1; 
+  z-index: 1;
 }
-.image-poster{
+
+.image-poster {
   background-color: #120B02;
   border: 3px solid #d8572a;
   height: 1096px;
@@ -91,13 +103,15 @@ height: auto;
   position: relative;
   margin-bottom: 10px;
 }
-.image-poster img{
-  border:3px solid #f7b538;
+
+.image-poster img {
+  border: 3px solid #f7b538;
   margin: auto;
   width: 431px;
   height: 701px;
 }
-.infos-poster{
+
+.infos-poster {
   position: absolute;
   width: 500px;
   margin: 150px 0;
@@ -106,25 +120,27 @@ height: auto;
   text-align: center;
   color: #ffffff;
 }
-.infos-poster h2{
+
+.infos-poster h2 {
   text-align: center;
   margin: 20px 0;
   color: #ffffff;
 }
 
-.grid-movie-poster-category{
+.grid-movie-poster-category {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
   margin: 200px 10px 100px 0;
   position: absolute;
- top: 0;
+  top: 0;
   left: 40px;
   right: 40px;
   bottom: 0;
 }
+
 .button-poster {
   display: flex;
   justify-content: center;
@@ -132,7 +148,8 @@ height: auto;
   flex-direction: column;
   margin-top: 30px;
 }
-.button-poster-infos{
+
+.button-poster-infos {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,7 +160,8 @@ height: auto;
   background-color: #343434;
   color: #f7b538;
 }
-.button-poster-watch{
+
+.button-poster-watch {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,38 +173,44 @@ height: auto;
   color: #120B02;
 }
 
-  
-  .pagination-container-category {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .pagination-category {
-    margin: -100px 40px;
-  }
-  .pagination-category span{
-    font-size: 30px;
-    color: #ffffff;
-    padding: 10px;
-    cursor: pointer;
-  }
-  .pagination-category span:hover{
-    font-size: 30px;
-    color: #f7b538;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .pagination-category button {
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    cursor: pointer;
-    padding: 8px 16px;
-    margin: 0 5px;
-  }
-  
-  .pagination-category button.active {
-    background-color: #f7b538;
-    color: #343434;
-  }
-  
+.button-poster-watch:hover {
+  background-color: #ad7712;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.pagination-container-category {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination-category {
+  margin: -100px 40px;
+}
+
+.pagination-category span {
+  font-size: 30px;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.pagination-category span:hover {
+  font-size: 30px;
+  color: #f7b538;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.pagination-category button {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin: 0 5px;
+}
+
+.pagination-category button.active {
+  background-color: #f7b538;
+  color: #343434;
+}

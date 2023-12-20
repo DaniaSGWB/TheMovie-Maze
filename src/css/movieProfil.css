@@ -18,8 +18,9 @@ body {
 .infos-movieProfil {
   text-align: center;
   color: white;
-  font-family: Anderson grotesk;
-  line-height: 30px;
+  font-family: Barlow;
+  font-size: 24px;
+  line-height: 50px;
   width: 800px;
 }
 
@@ -30,10 +31,10 @@ body {
 
 }
 
-.button-movieProfil button {
+#gris {
   align-items: center;
   background-clip: padding-box;
-  background-color: #fa6400;
+  background-color: #343434;
   border: 1px solid transparent;
   border-radius: .25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -59,17 +60,62 @@ body {
   width: auto;
 }
 
-.button-movieProfil:hover button,
-.button-movieProfil:focus button {
-  background-color: #fb8332;
+#jaune {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #f7b538;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+#gris:hover,
+#gris:focus  {
+  background-color: #747474;
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
-.button-movieProfil:hover button {
+#gris:hover {
   transform: translateY(-1px);
 }
 
-.button-movieProfil:active button {
+#gris:active button {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+#jaune:hover,
+#jaune:focus  {
+  background-color: #ad7712;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;          
+}
+
+#jaune:hover {
+  transform: translateY(-1px);
+}
+
+#jaune:active button {
   background-color: #c85000;
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
